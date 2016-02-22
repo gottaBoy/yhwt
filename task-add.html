@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加任务</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/mui.picker.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="mainBox">
+	<div class="main">
+		<form action="#" method="post" id="form1">
+			<div class="warp swiper-container">
+				<div class="issue swiper-wrapper " id="issue">
+					<div class="cnt swiper-slide swiper-slide-visible swiper-slide-active">
+				 		<div class="inp1"><label>演出名称：</label><input type="text" id="x-name" placeholder="请填写演出名称">*</div>
+
+				 		<div class="inp1"><label>演出时间：</label>
+				 			<div class="in relative">
+				 				<span class="date-rl"></span>
+				 				<button id='s-date' data-options='{}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
+				 		<!-- <div class="in"><input type="date" id="date-x1">
+				 			<input type="text" id="s-date">
+				 		</div> --> *</div>
+
+				 		<div class="inp1"><label>应征开始：</label>
+				 			<div class="in relative">
+				 				<span class="date-rl"></span>	
+				 				<button id='e-date' data-options='{}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
+				 		<!-- <div class="in"><input type="date" id="date-x2">
+				 			<input type="text" id="e-date" >
+				 		</div> --> *</div>
+
+				 		<div class="inp1"><label>应征结束：</label>
+				 			<div class="in relative">
+				 				<span class="date-rl"></span>	
+				 				<button id='e-date2' data-options='{}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
+				 		<!-- <div class="in"><input type="date" id="date-x2">
+				 			<input type="text" id="e-date" >
+				 		</div> --> *</div>
+
+				 		<div class="inp1 clearfix"><label>演出城市：</label>
+				 			<div class="in"><button id='showCityPicker3' class="mui-btn mui-btn-block" type='button'>请选择城市...</button></div>
+				 		</div>	
+				 		<div class="inp1"><label>演出地点：</label><input type="text" id="x-address" placeholder="请填写演出的具体地址"> *</div>			
+						<div class="btnBox"><a href="javascript:void(0);" class="btn-xx app-btn nextPage">下一页</a></div>
+					</div>		
+				</div>
+				
+			</div>
+		</form>
+    </div>
+</section>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> 
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script type="text/javascript" src="js/dateX.js"></script>
+<script src="js/city.data.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<script>
+	(function($, doc) {
+		$.init();
+		$.ready(function() {
+			var cityPicker3 = new $.PopPicker({
+				layer: 3
+			});
+			cityPicker3.setData(cityData3);
+			var showCityPickerButton = doc.getElementById('showCityPicker3');
+			showCityPickerButton.addEventListener('tap', function(event) {
+				cityPicker3.show(function(items) {
+					showCityPickerButton.innerText = (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+					//返回 false 可以阻止选择框的关闭
+					//return false;
+				});
+			}, false);
+		});
+	})(mui, document);
+</script>
+</body>
+</html>

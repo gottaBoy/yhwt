@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>添加任务</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/mui.picker.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/roleList.js"></script>
+</head>
+<body>
+<a href="javascript:void(0);" class="add"><em class="tb-1"></em>+请点击此处添加角色</a>
+<section class="mainBox top_h">
+	<div class="main">
+		<form action="#" method="post" id="form1">
+		<div class="war" id="war"></div>
+			<div class="warp swiper-container">
+				<div class="issue swiper-wrapper " id="issue">
+				 	<div class="cnt swiper-slide">
+				 		<div class="role">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" id="tab11">
+								<tr>
+									<td width="20%" align="right">角色：</td>
+									<td width="30%" class="r1">舞蹈</td>
+									<td width="20%" align="right">性别：</td>
+									<td width="30%" class="r2">男</td>
+								</tr>
+
+								<tr>
+									<td width="20%" align="right">人数：</td>
+									<td width="30%" class="r3">4</td>
+									<td width="20%" align="right">预算：</td>
+									<td width="30%" class="r4">20000</td>
+								</tr>
+
+								<tr>
+									<td width="20%" align="right" valign="top">备注：</td>
+									<td width="80%" colspan="3" class="pr20 r5">			
+									4名男生均身高175cm以上，气质佳。
+									</td>
+								</tr>
+
+							</table>
+
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" id="tab22">
+								<tr>
+									<td width="20%" align="right">角色：</td>
+									<td width="30%" class="r1">大提琴</td>
+									<td width="20%" align="right">性别：</td>
+									<td width="30%" class="r2">不限</td>
+								</tr>
+
+								<tr>
+									<td width="20%" align="right">人数：</td>
+									<td width="30%" class="r3">1</td>
+									<td width="20%" align="right">预算：</td>
+									<td width="30%" class="r4">3000</td>
+								</tr>
+
+								<tr>
+									<td width="20%" align="right" valign="top">备注：</td>
+									<td width="80%" colspan="3" class="pr20 r5">			
+									自备乐器，离杨浦区较近。
+									</td>
+								</tr>
+
+							</table>
+							
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" id="tab33">
+								<tr>
+									<td width="20%" align="right">角色：</td>
+									<td width="30%" class="r1">小提琴</td>
+									<td width="20%" align="right">性别：</td>
+									<td width="30%" class="r2">不限</td>
+								</tr>
+
+								<tr>
+									<td width="20%" align="right">人数：</td>
+									<td width="30%" class="r3">2</td>
+									<td width="20%" align="right">预算：</td>
+									<td width="30%" class="r4">15000</td>
+								</tr>
+
+								<tr>
+									<td width="20%" align="right" valign="top">备注：</td>
+									<td width="80%" colspan="3" class="pr20 r5">				
+									自备乐器，离杨浦区较近。
+									</td>
+								</tr>
+
+							</table>
+				 		</div>
+
+				 		<div class="inp1 zong"><label>总备注：</label><textarea class="tea1 bz-2">公司年会活动，2名小提琴，1名大提琴，4名男伴舞，形象佳，表演经验丰富。</textarea></div>		
+						
+	                    <div class="btnBox">
+		                     <a href="javascript:void(0);" class="btn-xx app-btn publish">发布</a>
+		                </div>
+					</div>		
+				</div>
+			</div>
+		</form>
+	</div>
+</section>	
+
+<div class="mask"></div>
+<div class="popbox" style="display:none;">
+	<span class="close-btn"></span>
+	<p class="role-tile">角色</p>
+	<div class="role-a" style="text-align:left;">
+		<div class="t1"></div>
+		<div class="t2"></div>
+		<div class="t3"></div>
+	</div>
+
+	<div class="inp1"><label>自定义：</label><input type="text" class="ourset" disabled="disabled" placeholder='“其他”选项，再自定义角色'></div>
+	<div class="inp1" style="overflow:hidden;"><label style="float:left;">性别：</label>
+		<div class="in"><button id='showUserPicker' class="mui-btn mui-btn-block" type='button'>请选择性别...</button></div>
+		<!-- <select id="sex" class="sex" name="sex"><option value="不限">不限</option><option value="男">男</option><option value="女">女</option></select> --></div>
+	<div class="inp1"><label>人数：</label><input type="number" class="perNum"> *</div>
+	<div class="inp1"><label>单人预算：</label><input type="number" class="yen"> 元 *</div>
+	<div class="inp1"><label>备注：</label><textarea class="tea1 bz-1"></textarea></div>
+	<div class="t-center"><a href="javascript:void(0);" class="save-btn">保存</a></div>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script> 
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script src="js/city.data.js"></script>
+<script src="js/city.data-3.js"></script>
+<script src="js/common.js"></script>
+
+<script>
+(function($, doc) {
+	$.init();
+	$.ready(function() {
+		var userPicker = new $.PopPicker();
+		userPicker.setData([{
+			value: '1',
+			text: '男'
+		}, {
+			value: '2',
+			text: '女'
+		}]);
+		var showUserPickerButton = doc.getElementById('showUserPicker');
+		showUserPickerButton.addEventListener('tap', function(event) {
+			userPicker.show(function(items) {
+				showUserPicker.innerText = JSON.stringify(items[0]["text"]).replace(/\"/g, "");
+				//返回 false 可以阻止选择框的关闭
+				//return false;
+			});
+		}, false);
+	});
+})(mui, document);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>注册</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="css/mui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+	input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{padding:10px 15px 10px 35px;}
+</style>
+</head>
+<body style="background:#f2f2f2;">
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">经纪人注册</h1>
+	</header>
+	
+	<div class="mui-content reg_gz">
+		<form id='login-form' class="mui-input-group">
+			<div class="mui-input-row h-portrait">
+				<label>头像</label> 
+				<div class="w-text">
+	 				<div class="imgload">
+					    <div class="imgview  adDWXBgIMG  margin-top-20">
+					        <span><img id="img" src="images/cross.png"></span>
+					    </div>
+					    <div id="error" class="help-block text-center"></div>
+					    <div class="btn-box margin-top-20">
+					        <div class="btn-block blue border fileinput-button">
+					        	<input type="button" value="选择文件" class="sel-btn">
+					            <input type="file" accept = "image/*; capture=camera" value="" id="testmm"/>
+					            <input type="hidden" id="imgurl">
+					        </div>
+					    </div>
+					</div>  
+	 			</div>
+
+			</div>
+
+			<div class="mui-input-row"><label>昵称</label><input type="text" class="mui-input-clear mui-input jjr-nc" placeholder="请输入昵称"></div>
+			<div class="mui-input-row"><label>名称</label><input type="text" class="mui-input-clear mui-input jjr-name" placeholder="请输入名称"></div>
+			<div class="mui-input-row"><label>邮箱</label><input type="text" class="mui-input-clear mui-input jjr-mail" placeholder="请再次邮箱"></div>
+			<div class="mui-input-row txta"><label>简介</label><textarea class="txt_area"></textarea></div>
+			<div class="agree">
+				<p class="jwarning">少于5个艺人不能应征不能发任务！</p>
+				<div><a href="#" class="reg-btn jjr-btn">完 成</a><div>
+			</div>
+		</form> 
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> 
+	<script src="js/upload.js"></script>
+	<script src="js/unload_sc.js"></script>
+	<script type="text/javascript" src="js/register.js"></script>
+
+	<script>
+	  	sc("#testmm","#img","#error");
+	</script>
+</body>
+</html>

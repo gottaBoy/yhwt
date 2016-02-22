@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>登陆</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="css/mui.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background:#f2f2f2;">
+	<div class="mui-content">
+		<form id='login-form' class="mui-input-group">
+			<div class="mui-input-row">
+				<label>账号</label>
+				<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入手机号/邮箱/用户名">
+			</div>
+			<div class="mui-input-row">
+				<label>密码</label>
+				<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码">
+			</div>
+		</form>
+
+		<div class="mui-content-padded">
+			<button id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</button>
+			<div class="link-area"><a id='reg'>注册账号</a> <span class="spliter">|</span> <a id='forgetPassword'>忘记密码</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="qq-weixin">
+		<a href="#">QQ登录</a>
+		<a href="#">微信登录</a>
+	</div>
+
+	
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> 
+	<script type="text/javascript" src="js/common.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		var oLogin = document.getElementById("login");
+		oLogin.addEventListener('tap', function() {
+			mui.toast('登录不成功！');
+		});
+	</script>
+</body>
+</html>
