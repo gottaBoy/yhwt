@@ -13,7 +13,7 @@ var remix = {
 		"nicheng" : "",
 		"name" : "",
 		"address" : "",
-		"service" : ""
+		"service" : []
 	},
 
 	jsonWt : {
@@ -158,11 +158,12 @@ var remix = {
 		var $aList = $(".rowList").find("span");
 		for(var i=0; i<$aList.size(); i++){
 			if($aList.eq(i).hasClass("active")){
-				_this.regCompany["address"] = $aList.eq(i).html();
+				_this.regCompany["service"].push($aList.eq(i).html());
 			}
 		}
 
-		if(_this.regCompany["nicheng"] != "" && _this.regCompany["name"] != "" && _this.regCompany["address"] != "" && _this.regCompany["service"] != ""){
+
+		if(_this.regCompany["nicheng"] != "" && _this.regCompany["name"] != "" && _this.regCompany["service"] != ""){
 			console.log(_this.regCompany["nicheng"] + "|" + _this.regCompany["name"] + "|" + _this.regCompany["address"] + "|" + _this.regCompany["service"]);
 			return false;
 		}else {
@@ -346,7 +347,7 @@ var remix = {
 			isFlag = true;
 			var _this = th;
 
-			$(document).on("click",".t1 span",function(){
+			$(document).on("touchstart",".t1 span",function(){
 				_this.changeColor(this);
 			});
 
@@ -513,26 +514,32 @@ var remix = {
 		var $role_TXT1 = "";
 		var $role_TXT2 = "";
 		var $role_TXT3 = "";
-
+		var $bFlag = $v1 = $v2 = $v3 = false;
+		
 		for(var i = 0; i < $s1.size(); i++){
 			if($s1.eq(i).hasClass("active")){
+				$v1 = true;
 				$role_TXT1 = $s1.eq(i).html();
 			}
 		}
 
 		for(var i = 0; i < $s2.size(); i++){
 			if($s2.eq(i).hasClass("active")){
+				$v2 = true;
 				$role_TXT2 = $s2.eq(i).html();
 			}
 		}
 
 		for(var i = 0; i < $s3.size(); i++){
 			if($s3.eq(i).hasClass("active")){
+				$v3 = true;
 				$role_TXT3 = $s3.eq(i).html();
 			}
 		}
 
-		
+		if($v1 && $v2 && $v3){
+			$bFlag = true;
+		}
 
 		if($aTxt == ""){
 			$ourTxt = $role_TXT1 + " " + $role_TXT2 + " " + $role_TXT3;
@@ -553,7 +560,7 @@ var remix = {
 		var $roleVal4 = $(".yen").val();
 		var $roleVal5 = $(".bz-1").val();
 
-		if($roleVal3 != "" && $roleVal4 != ""){
+		if($roleVal3 != "" && $roleVal4 != "" && $bFlag){
 			if($aTxt == ""){
 				var html = '<table width="100%" id="tab'+_this.rnd(1,100)+_this.rnd(1,500000)+'" cellpadding="0" cellspacing="0" border="0"><tr><td width="20%" align="right">角色：</td><td width="30%" class="r1" roleName=true roleDesc=false>'+$roleVal1+'</td><td width="20%" align="right">性别：</td><td width="30%" class="r2">'+$roleVal2+'</td></tr><tr><td width="15%" align="right">人数：</td><td width="35%" class="r3">'+$roleVal3+'</td><td width="20%" align="right">预算：</td><td width="30%" class="r4">'+$roleVal3*parseFloat($roleVal4)+'</td></tr><tr><td width="15%" align="right" valign="top">备注：</td><td width="85%" colspan="3" class="pr20 mar0 r5">'+$roleVal5+'</td></tr></table>';
 			} else {
@@ -563,7 +570,11 @@ var remix = {
 			$(".role").append(html);
 			_this.hideSet();
 		} else {
-			alert("*为必填项！");
+			if($bFlag){
+				alert("*为必填项！");
+			} else {
+				alert("角色信息填写不完整！");
+			}
 		}
 	},
 

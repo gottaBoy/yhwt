@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
+<html><head>
+<meta charset="utf-8">
 <title>任务详情－自己看</title>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 <meta content="yes" name="apple-mobile-web-app-capable">
@@ -8,6 +8,7 @@
 <meta name="format-detection" content="telephone=no"> 
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/mui.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -43,7 +44,8 @@
 								</li>
 							</ul>
 						</div>
-						<div class="btnBox"><a href="javascript:void(0);" class="btn-xx app-btn nextPage">关闭活动</a></div>
+						<div class="btnBox"><a href="javascript:void(0);" id='confirmBtn' class="btn-xx app-btn">关闭活动</a></div>
+						<div id="info"></div>
 					</div>		
 				</div>
 				
@@ -52,19 +54,25 @@
     </div>
 </section>
 
-
-<div class="mask"></div>
-<div class="comfirm">
-	<p>是否确认取消该任务?</p>
-	<p>关闭后，活动无法再次激活！</p>
-
-	<div class="mt30">
-		<a href="javascript:void(0)" class="confirm-btn">确定</a>
-		<a href="javascript:void(0)" class="confirm-btn confirm-false">取消</a>
-	</div>
-</div>
-
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> 
+<script type="text/javascript" src="js/mui.min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript" charset="utf-8">
+			//初始化
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+
+			var info = document.getElementById("info");
+			document.getElementById("confirmBtn").addEventListener('tap', function() {
+				var btnArray = ['是', '否'];
+				var isTrue = mui.confirm('确定关闭活动？');
+				$obj = $(".mui-popup");
+				$obj.css("position","fixed");
+			});
+			
+		</script>
+
 </body>
 </html>
