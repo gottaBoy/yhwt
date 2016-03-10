@@ -41,7 +41,7 @@ input {
 .header .home img,.header .userSet img{margin-top:4px;width:100%;}
 
 /**/
-.mainBox {position:relative;top:10px;left:0;z-index:2;}
+.mainBox {position:relative;top:0;left:0;z-index:2;}
 .homeMain{min-height:530px;}
 .homeMain .bg{min-height:530px;}
 .title{padding:0 10px;}
@@ -200,7 +200,7 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
 .list-x a span{width:31%; height:2.3rem; line-height:2.3rem; display:inline-block; font-size:0.8rem;}
 .tcenter{text-align:center;}
 .tright{text-align:right;}
-.newAdd{z-index:1000;width:4rem; height:4rem; text-align:center; line-height:4rem; background-color:#fc9e2f; color:#fff; font-size:1.8rem; border-radius:50%; font-weight:bold; position:fixed; right:15px; bottom:20px;}
+.newAdd{z-index:1000;width:4rem; height:4rem; text-align:center; line-height:3.8rem; background-color:#fc9e2f; color:#fff; font-size:1.8rem; border-radius:50%; font-weight:bold; position:fixed; right:15px; bottom:20px;}
 .inp1 .act-det{display:inline-block; vertical-align:top; color:#999; width:70%; line-height:22px;}
 .liststyle ul{ overflow-y:scroll !important; }
 .det .inp1 label{vertical-align:top}
@@ -225,8 +225,8 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
 .mt30{margin-top:30px;}
 .zong{padding:10px 5px;}
 .relative{position:relative;}
-.date-rl{position:absolute; left:3px; top:3px; width:23px; height:23px; background:url(../images/date.png) no-repeat center center; background-size:100% 100%; z-index:100;}
-.artist ul.list{background-color:#fff; padding:0 10px; border:1px solid #ccc; border-left:0; border-right:0; margin-bottom:10px;}
+.date-rl{position:absolute; left:3px; top:8px; width:23px; height:23px; background:url(../images/date.png) no-repeat center center; background-size:100% 100%; z-index:100;}
+.artist ul.list{background-color:#fff; padding:0 10px; border-top:1px solid #ccc; margin-bottom:10px;}
 .artist ul.list li{line-height:2.2rem; border-bottom:1px dashed #ccc; font-size:0.9rem;}
 .artist ul.list li span{display:inline-block; width:27%; vertical-align:top;}
 .artist ul.list li em{display:inline-block; width:72%;}
@@ -242,7 +242,7 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
 .artistprice ul li a{height:25px; width:3rem; border-radius:5px; color:#fff; display:inline-block; background-color:#f63; line-height:25px; text-align:center; position:absolute; right:20px; top:5px;}
 .artistprice ul li.bbn{border-bottom:none;}
 .nextBtn{width:20px; height:20px; background:url(../images/iconfont-icon02.png) no-repeat center center; background-size:100% 100%; position:absolute; right:10px; top:10px;}
-.art-head{margin-bottom:10px;}
+.art-head{margin-bottom:10px; padding:10px 0; background-image:url(../images/headbg.png); background-repeat:no-repeat; background-size:100% 100%;}
 .art-himg{width:5rem; height:5rem; margin:0 auto; position:relative;}
 .art-himg img{width:5rem; height:5rem; border-radius:50%;}
 .art-img-txt{position:absolute; left:5.3rem; top:2rem; width:4.5rem;}
@@ -443,7 +443,8 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
 .sec_list aside:nth-of-type(3){background:#2196f3 url(../images/jingjiren.png) no-repeat center center; background-size:50% 50%;}
 .sec_list aside:nth-of-type(4){background:#2196f3 url(../images/artist.png) no-repeat center center; background-size:50% 50%;}
 .sec_list aside span{display:block; position:absolute; left:0; bottom:10%; width:100%; text-align:center; color:#fff;}
-.sec_list aside:hover{-webkit-animation:rotate 1.5s;}
+.sec_list aside:hover{-webkit-animation:rotate 1.5s forwards;}
+.sec_list aside a{width:100%; height:100%; display:block;}
 @-webkit-keyframes rotate{
 	100%{
 		-webkit-transform:rotateY(360deg);
@@ -503,7 +504,7 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
 .agree a.no{background-color:#ccc;}
 
 #artistList{margin-bottom:2.25rem; position:relative;}
-#artistList ul{overflow:hidden;}
+.list_outer{height:108px; overflow:hidden; border-bottom:1px solid #ccc;}
 #artistList a.telescopic{position:absolute; display:block; width:50%; border:1px solid #ccc; background-color:#fcfcfc; font-size:0.85rem; padding:5px 0; left:50%; bottom:-1.7rem; margin-left:-25%; line-height:1rem; text-align:center;}
 .art-tab-img{display:block; width:100%; background-position:center center; background-size:100% auto; background-color:#efefef; background-repeat:no-repeat;}
 .video_list a{display:flex; width:100%; height:2.5rem; padding:5px; position:relative; margin-top:10px;}
@@ -518,3 +519,5 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
 .videoListAdd a span{height:3rem; line-height:1rem;}
 .videoListAdd a span i{display:block;}
 .jwarning{font-size:0.7rem; color:#f63; text-align:left; padding-left:10px;}
+.mui-table-view {margin-top: 20px;}
+.circle_btn{width:45px; height:45px; padding:8px; line-height:14px; display:block; background-color:#308ACA; border-radius:50%; position:absolute; color:#fff; text-align:center; z-index:100; font-size:12px; bottom:30px; right:20px;}

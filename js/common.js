@@ -695,6 +695,10 @@ var effects = {
 			_this.addVideoList();
 		});
 
+		$(".circle_open").on("click",function(){
+			_this.openClose($(this));
+		});
+
 		_this.bgAutoHeight();
 	},
 
@@ -702,11 +706,11 @@ var effects = {
 		var $aLi = $("#artistList").find("li").eq(0).outerHeight();
 		if(effects.artFlag){
 			$(".telescopic").html("点击收缩");
-			$("#artistList ul").animate({height:effects.artUlHeight});
+			$(".list_outer").animate({height:$aLi*3});
 			effects.artFlag = false;
 		} else {
 			$(".telescopic").html("点击展开");
-			$("#artistList ul").animate({height:$aLi*3});
+			$(".list_outer").animate({height:effects.artUlHeight});
 			effects.artFlag = true;
 		}
 	},
@@ -727,6 +731,22 @@ var effects = {
 			$(".videoTitle").val("");
 		} else{
 			alert("请将视频标题和视频地址填写完整!");
+		}
+	},
+
+	openClose : function(obj){
+		if(obj.html() == "+"){
+			$(".wt-1").animate({right:100,bottom:20},{duration:200});
+			$(".wt-2").animate({right:75,bottom:75},{duration:200});
+			$(".wt-3").animate({right:18,bottom:100},{duration:200});
+			obj.html("-");
+		} else {
+			$(".wt-3").animate({right:20,bottom:30},{duration:200,complete:function(){
+				$(".wt-2").animate({right:20,bottom:30},{duration:200,complete:function(){
+					$(".wt-1").animate({right:20,bottom:30},{duration:200});
+				}});
+			}});
+			obj.html("+");
 		}
 	}
 };
