@@ -14,4 +14,19 @@ artist-video.html     --- 艺人详情：作品－视频
 
 company.html          --- 企业详情
 
+404.html              --- 页面404
+505.html              --- 服务器报错
+dialog.html           --- 弹出框
+upload.html           --- 上传图片
+pcenter.html          --- 个人中心
+
+login.html            --- 登录页
+nav.html              --- 注册主面板
+register_gz.html      --- 观众注册
+reg_jjr1.html         --- 经纪人注册第一步
+reg_jjr2.html         --- 经纪人注册第二步
+reg_company1.html     --- 企业注册第一步
+reg_company2.html     --- 企业注册第二步
+
+
 

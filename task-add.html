@@ -23,7 +23,7 @@
 				 		<div class="inp1"><label>演出时间：</label>
 				 			<div class="in relative">
 				 				<span class="date-rl"></span>
-				 				<button id='s-date' data-options='{}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
+				 				<button id='s-date' data-options='{"type":"date","beginYear":1970,"endYear":2020}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
 				 		<!-- <div class="in"><input type="date" id="date-x1">
 				 			<input type="text" id="s-date">
 				 		</div> --> *</div>
@@ -31,7 +31,7 @@
 				 		<div class="inp1"><label>应征开始：</label>
 				 			<div class="in relative">
 				 				<span class="date-rl"></span>	
-				 				<button id='e-date' data-options='{}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
+				 				<button id='e-date' data-options='{"type":"date","beginYear":1970,"endYear":2020}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
 				 		<!-- <div class="in"><input type="date" id="date-x2">
 				 			<input type="text" id="e-date" >
 				 		</div> --> *</div>
@@ -39,7 +39,7 @@
 				 		<div class="inp1"><label>应征结束：</label>
 				 			<div class="in relative">
 				 				<span class="date-rl"></span>	
-				 				<button id='e-date2' data-options='{}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
+				 				<button id='e-date2' data-options='{"type":"date","beginYear":1970,"endYear":2020}' class="btn mui-btn mui-btn-block">2016-01-01 09:00</button></div>
 				 		<!-- <div class="in"><input type="date" id="date-x2">
 				 			<input type="text" id="e-date" >
 				 		</div> --> *</div>
@@ -55,6 +55,25 @@
 			</div>
 		</form>
     </div>
+    
+	<nav class="mui-bar mui-bar-tab menu">
+		<a class="mui-tab-item mui-active" href="#tabbar">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-chat">
+			<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+			<span class="mui-tab-label">发通告</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-contact">
+			<span class="mui-icon mui-icon-star"></span>
+			<span class="mui-tab-label">艺人</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-map">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
 </section>
 
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script> 

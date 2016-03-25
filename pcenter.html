@@ -15,8 +15,8 @@
 <div id="setting" class="mui-page">
 	<!--页面主内容区开始-->
 	<div class="mui-page-content">
-		<div class="mui-scroll-wrapper">
-			<div class="mui-scroll">
+		<div class="mui-scroll-wrapper no-ab">
+			<div class="mui-scroll no-ab">
 				<ul class="mui-table-view mui-table-view-chevron">
 					<li class="mui-table-view-cell mui-media">
 						<a class="mui-navigate-right" href="#account">
@@ -26,6 +26,20 @@
 								<p class='mui-ellipsis'>账号:JiaHe</p>
 							</div>
 						</a>
+					</li>
+					<li class="mui-table-view-cell center_list">
+						<a href="#" class="center_item">
+                            <img class="icon" src="images/person_1.png">
+                            <div>发布委托</div>
+                        </a> 
+						<a href="#" class="center_item item_2">
+                            <img class="icon" src="images/person_2.png">
+                            <div>发布通告</div>
+                        </a> 
+						<a href="#" class="center_item">
+                            <img class="icon" src="images/person_3.png">
+                            <div>成为艺人</div>
+                        </a> 
 					</li>
 				</ul>
 				<ul class="mui-table-view mui-table-view-chevron">
@@ -55,12 +69,25 @@
 			</div>
 		</div>
 	</div>
+	<nav class="mui-bar mui-bar-tab menu">
+		<a class="mui-tab-item mui-active" href="#tabbar">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-chat">
+			<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+			<span class="mui-tab-label">发通告</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-contact">
+			<span class="mui-icon mui-icon-star"></span>
+			<span class="mui-tab-label">艺人</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-map">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
 </div>
-
-<span class="newAdd circle_open">+</span>
-<a href="#" class="circle_btn wt-1">发布<br />委托</a>
-<a href="#" class="circle_btn wt-2">发布<br />公告</a>
-<a href="#" class="circle_btn wt-3">申请<br />认证</a>	
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/common.js"></script>
 </body>

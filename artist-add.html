@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/mui.min.css">
 <link rel="stylesheet" href="css/mui.picker.min.css">
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 <section class="mainBox">
@@ -25,10 +26,10 @@
 				 			<li><div class="inp1"><label>出生年月：</label> <div class="in relative"><!-- <input type="date" class="time-x">
 						 			<input type="text" class="activeTime"> -->
 						 			<span class="date-rl"></span>
-						 			<button id='demo1' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block cbrith">2015-01-01</button>
+						 			<button id='demo1' data-options='{"type":"date","beginYear":1970,"endYear":2020}' class="btn mui-btn mui-btn-block cbrith">2015-01-01</button>
 						 		</div> 
 			 				*</div></li>
-				 			<li><div class="inp1"><label>所在地：</label> <div class="in"><button id='showCityPicker' class="mui-btn mui-btn-block caddress" type='button'>请选择城市...</button> </div></div></li>
+				 			<li><div class="inp1"><label>所在地：</label> <div class="in"><button id='showCityPicker' class="mui-btn mui-btn-block caddress" type='button'>上海市</button> </div></div></li>
 				 			<li><div class="inp1"><label>手机：</label><input type="text" class="artname ctel"> *</div></li>
 				 			<li><div class="inp1"><label>Email：</label><input type="text" class="artname cmail"> *</div></li>
 				 			<li><div class="inp1"><label>身高：</label><input type="text" class="artname cheight"> cm</div></li>
@@ -101,8 +102,25 @@
 			</div>
 		</form>
     </div>
+	<nav class="mui-bar mui-bar-tab menu">
+		<a class="mui-tab-item mui-active" href="#tabbar">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-chat">
+			<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+			<span class="mui-tab-label">发通告</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-contact">
+			<span class="mui-icon mui-icon-star"></span>
+			<span class="mui-tab-label">艺人</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-map">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
 </section>
-
 <div class="mask"></div>
 <div class="popbox" style="display:none;">
 	<span class="close-btn"></span>
@@ -113,7 +131,15 @@
 		<div class="t3"></div>
 	</div>
 	<div class="inp1"><label>自定义：</label><input type="text" class="ourset"></div>
-	<div class="inp1 h-price"><label>价格：</label><input type="number" class="yen" placeholder="元">/<input type="text" class="ptype" placeholder="场、小时、天"></div>
+	<div class="inp1 h-price">
+		<label>价格：</label>
+		<input type="number" class="yen" placeholder="100">元&nbsp;/<select class="mui-btn mui-btn-block ptype">
+					<option value="item-1">场</option>
+					<option value="item-2">首</option>
+					<option value="item-3">小时</option>
+					<option value="item-4">天</option>
+				</select><!-- <input type="text" class="ptype" placeholder="场、小时、天"> -->
+	</div>
 	<div class="t-center"><a href="javascript:void(0);" class="create-btn">保存</a></div>
 </div>
 

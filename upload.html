@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>修改头像</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta name="format-detection" content="telephone=no"> 
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" href="css/mui.picker.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="works">
+		<h3><strong>修改头像</strong></h3>
+		<div class="w-text">
+			<div class="imgload">
+		    <div class="imgview  adDWXBgIMG  margin-top-20">
+		        <span><img id="img" src="images/cross.png"></span>
+		    </div>
+		    <div id="error" class="help-block text-center"></div>
+		    <div class="btn-box margin-top-20">
+		        <div class="btn-block blue border fileinput-button">
+		        	<input type="button" value="选择文件" class="sel-btn">
+		            <input type="file" accept = "image/*; capture=camera" value="" id="testmm"/>
+		            <input type="hidden" id="imgurl">
+		        </div>
+		    </div>
+		</div>  
+		</div>
+		<!-- <p class="tip" >图片不超过30M</p> -->
+	</div>
+	<div class="tcenter mb10">
+		<a href="javascript:void(0);" class="create-com">确认</a>
+	</div>
+	<nav class="mui-bar mui-bar-tab menu">
+		<a class="mui-tab-item mui-active" href="#tabbar">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-chat">
+			<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+			<span class="mui-tab-label">发通告</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-contact">
+			<span class="mui-icon mui-icon-star"></span>
+			<span class="mui-tab-label">艺人</span>
+		</a>
+		<a class="mui-tab-item" href="#tabbar-with-map">
+			<span class="mui-icon mui-icon-contact"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+</body>
+</html>
