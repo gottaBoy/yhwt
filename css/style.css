@@ -535,3 +535,12 @@ input[type=color], input[type=date], input[type=datetime-local], input[type=date
 .no-ab{position: static;padding-bottom: 50px}
 
 .ptype{display:inline-block;width:80px;}
+
+.publish-yz{position:absolute; right:5px; top:5px; width:100px; height:30px; background-color:#318bcb; color:#fff; font-size:12px; text-align:center; line-height:30px;}
+.wait_gray{background-color:#efefef; color:#333;}
+.role table{position:relative;}
+.delete-btn{position:absolute; display:none; font-size:12px; right:5px; top:5px; width:50px; height:20px; border-radius:5px; text-align:center; line-height:20px; display:block; color:#fff; background-color:#f63;}
+.task-role{display:none;background-color:#fff; position:fixed; left:0; top:20%; z-index:101; margin-left:0; margin-top: 0; width:100%; padding:15px;}
+.role-yy{margin:10px 0; border-bottom:1px dashed #ccc; padding-bottom: 15px;}
+.role-yy:last-child{border:0;}
+.role-yy span{font-size:16px; color:#000; display:block; margin-bottom:5px;}

@@ -1,6 +1,13 @@
 var isFlag = false;
 
 var remix = {
+	waitTime : 60,
+	wTimer : null,
+	jTime : 60,
+	jTimer : null,
+	cTime : 60,
+	cTimer : null,
+
 	json : {
 		"name" : "",
 		"sDate" : "",
@@ -141,12 +148,60 @@ var remix = {
 			_this.changeColor(this);
 		}),
 
+		$(document).on("click",".gz-pub",function(){
+			var self = $(this);
+			_this.setInter(self,remix.wTimer,remix.waitTime);
+		});
+
+		$(document).on("click",".jjr-pub",function(){
+			var self = $(this);
+			_this.setInter(self,remix.jTimer,remix.jTime);
+		});
+
+
+		$(document).on("click",".com-pub",function(){
+			var self = $(this);
+			_this.setInter(self,remix.cTimer,remix.cTime);
+		});
+
+		$(document).on("click",".delete-btn",function(){
+			$(this).parent().parent().parent().parent().remove();
+		});
+
+		$(document).on("click",".yuyue",function(){
+			$(".task-role").show();
+			$(".mask").show();
+		});
+
 		_this.getValue();
 		_this.getTimer();
 		_this.disable();
 		_this.isTrue();
 		_this.checkNumber();
 		_this.initImgList();
+	},
+
+	setInter : function(self,timer,wtime){
+		var _this = this;
+		if(self.attr("data-flag") == 'true'){
+			_this.timerTab(self,timer,wtime);
+			self.attr("data-flag","false");
+			self.addClass("wait_gray");
+			timer = setInterval(function(){
+				wtime--;
+				_this.timerTab(self,timer,wtime);
+			},1000);
+		}
+	},
+
+	timerTab : function(self,timer,wtime){
+		if(wtime > 0){
+			self.text('等待'+wtime+'秒');
+		} else{
+			self.text('发送验证码').removeClass("wait_gray");
+			self.attr("data-flag","true");
+			clearInterval(timer);
+		}
 	},
 
 	comChk : function(){
@@ -562,9 +617,9 @@ var remix = {
 
 		if($roleVal3 != "" && $roleVal4 != "" && $bFlag){
 			if($aTxt == ""){
-				var html = '<table width="100%" id="tab'+_this.rnd(1,100)+_this.rnd(1,500000)+'" cellpadding="0" cellspacing="0" border="0"><tr><td width="20%" align="right">角色：</td><td width="30%" class="r1" roleName=true roleDesc=false>'+$roleVal1+'</td><td width="20%" align="right">性别：</td><td width="30%" class="r2">'+$roleVal2+'</td></tr><tr><td width="15%" align="right">人数：</td><td width="35%" class="r3">'+$roleVal3+'</td><td width="20%" align="right">预算：</td><td width="30%" class="r4">'+$roleVal3*parseFloat($roleVal4)+'</td></tr><tr><td width="15%" align="right" valign="top">备注：</td><td width="85%" colspan="3" class="pr20 mar0 r5">'+$roleVal5+'</td></tr></table>';
+				var html = '<table width="100%" id="tab'+_this.rnd(1,100)+_this.rnd(1,500000)+'" cellpadding="0" cellspacing="0" border="0"><tr><td width="20%" align="right">角色：</td><td width="30%" class="r1" roleName=true roleDesc=false>'+$roleVal1+'</td><td width="20%" align="right">性别：</td><td width="30%" class="r2">'+$roleVal2+'</td></tr><tr><td width="15%" align="right">人数：</td><td width="35%" class="r3">'+$roleVal3+'</td><td width="20%" align="right">预算：</td><td width="30%" class="r4">'+$roleVal3*parseFloat($roleVal4)+'</td></tr><tr><td width="15%" align="right" valign="top">备注：</td><td width="85%" colspan="3" class="pr20 mar0 r5">'+$roleVal5+'</td></tr><tr><td><span class="delete-btn">删除</span></td></tr></table>';
 			} else {
-				var html = '<table width="100%" id="tab'+_this.rnd(1,100)+_this.rnd(1,500000)+'" cellpadding="0" cellspacing="0" border="0"><tr><td width="20%" align="right">角色：</td><td width="30%" class="r1" roleName=false roleDesc=true>'+$roleVal1+'</td><td width="20%" align="right">性别：</td><td width="30%" class="r2">'+$roleVal2+'</td></tr><tr><td width="15%" align="right">人数：</td><td width="35%" class="r3">'+$roleVal3+'</td><td width="20%" align="right">预算：</td><td width="30%" class="r4">'+$roleVal3*parseFloat($roleVal4)+'</td></tr><tr><td width="15%" align="right" valign="top">备注：</td><td width="85%" colspan="3" class="pr20 mar0 r5">'+$roleVal5+'</td></tr></table>';
+				var html = '<table width="100%" id="tab'+_this.rnd(1,100)+_this.rnd(1,500000)+'" cellpadding="0" cellspacing="0" border="0"><tr><td width="20%" align="right">角色：</td><td width="30%" class="r1" roleName=false roleDesc=true>'+$roleVal1+'</td><td width="20%" align="right">性别：</td><td width="30%" class="r2">'+$roleVal2+'</td></tr><tr><td width="15%" align="right">人数：</td><td width="35%" class="r3">'+$roleVal3+'</td><td width="20%" align="right">预算：</td><td width="30%" class="r4">'+$roleVal3*parseFloat($roleVal4)+'</td></tr><tr><td width="15%" align="right" valign="top">备注：</td><td width="85%" colspan="3" class="pr20 mar0 r5">'+$roleVal5+'</td></tr><tr><td><span class="delete-btn">删除</span></td></tr></table>';
 			}
 			
 			$(".role").append(html);
