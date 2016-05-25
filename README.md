@@ -5,8 +5,11 @@ task.html             --- 任务详情：艺人看到的
 task-our.html         --- 任务详情：自己发布看到的
 
 entrust.html          --- 创建委托
+entrust-list.html     --- 通告列表（新）
 
 artist-add.html       --- 创建艺人
+artist-index.html     --- 艺人首页（新）
+artist-list.html      --- 艺人列表（新）
 artist.html           --- 艺人详情
 artist-comm.html      --- 艺人详情：评论
 artist-images.html    --- 艺人详情：作品－图片

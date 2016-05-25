@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>艺人列表</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no"> 
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+	.mui-slider .mui-slider-group .mui-slider-item img{width: 100% !important}
+</style>
+</head>
+	<body>
+		<div id="slider" class="mui-slider artist-banner" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/artist-banner.jpg" />
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/artist-banner.jpg" />
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/artist-banner.jpg" />
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/artist-banner.jpg" />
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="images/artist-banner.jpg" />
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="images/artist-banner.jpg" />
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		<div class="recom">
+			<div class="fl title">官方推荐</div>
+			<div class="recom-box">
+			    <ul class="list ">
+			        <li>
+			      		<a href="artist.html">
+			          		<img src="images/pic1.jpg">
+			          		<h4 class="d-title">花房姑娘</h4>
+			          		<p class="p1">舞台小公举</p>
+			      		</a>
+			        </li>
+			        <li>
+			      		<a href="artist.html">
+			          		<img src="images/pic1.jpg">
+			          		<h4 class="d-title">纳木萨</h4>
+			          		<p class="p1">花不园Cindy</p>
+			      		</a>
+			        </li>
+			        <li>
+			      		<a href="artist.html">
+			          		<img src="images/pic1.jpg">
+			          		<h4 class="d-title">佐罗</h4>
+			          		<p class="p1">花不园Cindy</p>
+			      		</a>
+			        </li>
+			    </ul>
+			</div>
+		</div>
+ 		<div class="works">
+ 			<h3><strong>艺人列表</strong><a href="artist-list.html" class="nextBtn">&nbsp;</a></h3>
+ 			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="artist.html">
+						<img class="mui-media-object mui-pull-left" src="images/pic1.jpg">
+						<div class="mui-media-body">
+							韩寒
+							<p class='mui-ellipsis'>作家、导演、赛车手</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="artist.html">
+						<img class="mui-media-object mui-pull-left" src="images/pic3.jpg">
+						<div class="mui-media-body">
+							周杰伦
+							<p class='mui-ellipsis'>华语男歌手、词曲创作人、制作人、演员</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="artist.html">
+						<img class="mui-media-object mui-pull-left" src="images/pic4.jpg">
+						<div class="mui-media-body">
+							Angelababy
+							<p class='mui-ellipsis'>女演员、模特、主持人</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right" href="artist.html">
+						<img class="mui-media-object mui-pull-left" src="images/pic5.jpg">
+						<div class="mui-media-body">
+							FanYe
+							<p class='mui-ellipsis'>模特、主持人</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+ 		</div>
+ 		<div class="personal">
+ 			<div class="title">委托我们</div>
+	        	<a class="wbox clearfix" href="entrust.html ">
+		            <div class="weituo" style="background-image: url(images/wbox.png)"></div>
+		            <div class="rbox fldi">神马？上面都没有找到你所需要的服务？没关系，委托我们，立即体验专属服务吧！</div>
+		        </a>
+ 		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			var slider = mui("#slider");
+			document.getElementById("switch").addEventListener('toggle', function(e) {
+				if (e.detail.isActive) {
+					slider.slider({
+						interval: 5000
+					});
+				} else {
+					slider.slider({
+						interval: 0
+					});
+				}
+			});
+		</script>
+	</body>
+
+</html>

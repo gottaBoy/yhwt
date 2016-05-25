@@ -173,6 +173,34 @@ var remix = {
 			$(".mask").show();
 		});
 
+		$(document).on("click",".list-radio p",function(){
+			var $em = $(this).find("em").eq(0);
+			var $parent = $(this).parent();
+			var $len = $parent.find("p").size();
+			for(var i=0; i<$len; i++){
+				$parent.find("p").eq(i).find("em").eq(0).removeClass("radio-act");
+			}
+			if($em.hasClass("radio-act")){
+				$em.removeClass("radio-act");
+			}else{
+				$em.addClass("radio-act");
+			}
+		});
+
+		$(document).on("click",".p-h-btn1",function(){
+			var $em = $(".list-radio").find("em");
+			var $arr = [];
+			$em.each(function(index){
+				if($em.eq(index).hasClass('radio-act')){
+					$arr.push({name:$em.eq(index).attr('name'),value:$em.eq(index).attr('value')});
+				}
+			});
+
+			$(".task-role").hide();
+			$(".mask").hide();
+			console.log($arr);
+		});
+
 		_this.getValue();
 		_this.getTimer();
 		_this.disable();
@@ -760,11 +788,11 @@ var effects = {
 	telescopic : function(){
 		var $aLi = $("#artistList").find("li").eq(0).outerHeight();
 		if(effects.artFlag){
-			$(".telescopic").html("点击收缩");
+			$(".telescopic").html("收缩");
 			$(".list_outer").animate({height:$aLi*3});
 			effects.artFlag = false;
 		} else {
-			$(".telescopic").html("点击展开");
+			$(".telescopic").html("展开");
 			$(".list_outer").animate({height:effects.artUlHeight});
 			effects.artFlag = true;
 		}
