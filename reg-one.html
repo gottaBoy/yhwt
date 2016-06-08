@@ -11,7 +11,7 @@
 <link href="css/mui.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css">
 <style type="text/css">
-	input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea{padding:10px 15px 10px 35px;}
+	input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week],input[type=radio], select, textarea{padding:10px 15px 10px 35px;}
 </style>
 </head>
 <body style="background:#f2f2f2;">
@@ -20,14 +20,15 @@
 	</header>
 	<div class="mui-content reg_gz">
 		<form id='login-form' class="mui-input-group">
-			<div class="mui-input-row"><em class="tel"></em><input type="text" class="mui-input-clear mui-input company-tel" placeholder="请输入手机号"></div>
-			<div class="mui-input-row"><em class="chk"></em><input type="text" class="mui-input-clear mui-input company-chk" placeholder="请输入验证码"><a href="javascript:;" class="publish-yz com-pub" data-flag="true">发送验证码</a></div>
-			<div class="mui-input-row"><em class="psw"></em><input type="password" class="mui-input-clear mui-input company-psw" placeholder="请输入6-12位密码"></div>
-			<div class="mui-input-row"><em class="psw"></em><input type="password" class="mui-input-clear mui-input company-cpsw" placeholder="请再次输入密码"></div>
-			<div class="mui-input-row"><em class="eml"></em><input type="text" class="mui-input-clear mui-input h-mail company-mail" placeholder="请输入邮箱地址"></div>
+			<div class="mui-input-row"><em class="mui-icon mui-icon-phone"></em><input type="text" class="mui-input-clear mui-input company-tel" placeholder="请输入手机号"></div>
+			<div class="mui-input-row"><em class="mui-icon mui-icon-chatbubble"></em><input type="text" class="mui-input-clear mui-input company-chk" placeholder="请输入验证码"><a href="javascript:;" class="publish-yz com-pub" data-flag="true">发送验证码</a></div>
+			<div class="mui-input-row"><em class="mui-icon mui-icon-locked"></em><input type="password" class="mui-input-clear mui-input company-psw" placeholder="请输入6-12位密码"></div>
+			<div class="mui-input-row"><em class="mui-icon mui-icon-locked"></em><input type="password" class="mui-input-clear mui-input company-cpsw" placeholder="请再次输入密码"></div>
+			<div class="mui-input-row"><em class="mui-icon mui-icon-email"></em><input type="text" class="mui-input-clear mui-input h-mail company-mail" placeholder="请输入邮箱地址"></div>
+			<div class="mui-input-row"><em class="mui-icon mui-icon-person"></em><span class="role"><input type="radio" name="reg-role">需求方<input type="radio" name="reg-role">企业<input type="radio" name="reg-role" flag="true">艺人<input type="radio" name="reg-role">经纪人</span></div>
 			<div class="agree">
 				<div class="xieyi"><input type="checkbox" id="company-chk" flag="false"> 同意《注册协议》<a href="#">已有账户？直接登录</a></div>
-				<div><a href="javascript:void(0);" class="reg-btn regcompany no">注 册</a><div>
+				<div><a href="javascript:void(0);" class="reg-btn regcompany no">注 册</a></div>
 			</div>
 		</form>
 	</div>

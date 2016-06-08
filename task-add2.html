@@ -14,7 +14,7 @@
 <script type="text/javascript" src="js/roleList.js"></script>
 </head>
 <body>
-<a href="javascript:void(0);" class="add"><em class="tb-1"></em>+请点击此处添加角色</a>
+<a href="javascript:void(0);" class="add"><em class="mui-icon mui-icon-personadd"></em>添加角色</a>
 <section class="mainBox top_h">
 	<div class="main">
 		<form action="#" method="post" id="form1">
@@ -23,22 +23,19 @@
 				<div class="issue swiper-wrapper " id="issue">
 				 	<div class="cnt swiper-slide">
 				 		<div class="role">
-							<table width="100%" cellpadding="0" cellspacing="0" border="0" id="tab11">
-								
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" id="tab11">			
 								<tr>
 									<td width="20%" align="right">角色：</td>
 									<td width="30%" class="r1">舞蹈</td>
 									<td width="20%" align="right">性别：</td>
 									<td width="30%" class="r2">男</td>
 								</tr>
-
 								<tr>
 									<td width="20%" align="right">人数：</td>
 									<td width="30%" class="r3">4</td>
 									<td width="20%" align="right">预算：</td>
 									<td width="30%" class="r4">20000</td>
 								</tr>
-
 								<tr>
 									<td width="20%" align="right" valign="top">备注：</td>
 									<td width="80%" colspan="3" class="pr20 r5">			
@@ -46,9 +43,8 @@
 									</td>
 								</tr>
 								<tr>
-									<td><span class="delete-btn">删除</span></td>
+									<td><span class="mui-icon mui-icon-trash delete-btn"></span></td>
 								</tr>
-
 							</table>
 
 							<table width="100%" cellpadding="0" cellspacing="0" border="0" id="tab22">
@@ -58,14 +54,12 @@
 									<td width="20%" align="right">性别：</td>
 									<td width="30%" class="r2">不限</td>
 								</tr>
-
 								<tr>
 									<td width="20%" align="right">人数：</td>
 									<td width="30%" class="r3">1</td>
 									<td width="20%" align="right">预算：</td>
 									<td width="30%" class="r4">3000</td>
 								</tr>
-
 								<tr>
 									<td width="20%" align="right" valign="top">备注：</td>
 									<td width="80%" colspan="3" class="pr20 r5">			
@@ -74,7 +68,7 @@
 								</tr>
 
 								<tr>
-									<td><span class="delete-btn">删除</span></td>
+									<td><span class="mui-icon mui-icon-trash delete-btn"></span></td>
 								</tr>
 
 							</table>
@@ -86,14 +80,12 @@
 									<td width="20%" align="right">性别：</td>
 									<td width="30%" class="r2">不限</td>
 								</tr>
-
 								<tr>
 									<td width="20%" align="right">人数：</td>
 									<td width="30%" class="r3">2</td>
 									<td width="20%" align="right">预算：</td>
 									<td width="30%" class="r4">15000</td>
 								</tr>
-
 								<tr>
 									<td width="20%" align="right" valign="top">备注：</td>
 									<td width="80%" colspan="3" class="pr20 r5">				
@@ -101,16 +93,18 @@
 									</td>
 								</tr>
 								<tr>
-									<td><span class="delete-btn">删除</span></td>
+									<td><span class="mui-icon mui-icon-trash delete-btn"></span></td>
 								</tr>
 
 							</table>
 				 		</div>
 
-				 		<div class="inp1 zong"><label>总备注：</label><textarea class="tea1 bz-2">公司年会活动，2名小提琴，1名大提琴，4名男伴舞，形象佳，表演经验丰富。</textarea></div>		
-						
+				 		<div class="inp1 zong">
+				 			<label>总备注：</label>
+				 			<textarea class="tea1 bz-2">公司年会活动，2名小提琴，1名大提琴，4名男伴舞，形象佳，表演经验丰富。</textarea>
+				 		</div>								
 	                    <div class="btnBox">
-		                     <a href="javascript:void(0);" class="btn-xx app-btn publish">发布</a>
+		                     <a href="javascript:void(0);" class="create-com publish">发布</a>
 		                </div>
 					</div>		
 				</div>
@@ -139,7 +133,7 @@
 
 <div class="mask"></div>
 <div class="popbox" style="display:none;">
-	<span class="close-btn"></span>
+	<span class="mui-icon mui-icon-close close-btn"></span>
 	<p class="role-tile">角色</p>
 	<div class="role-a" style="text-align:left;">
 		<div class="t1"></div>
@@ -149,8 +143,7 @@
 
 	<div class="inp1"><label>自定义：</label><input type="text" class="ourset" disabled="disabled" placeholder='“其他”选项，再自定义角色'></div>
 	<div class="inp1" style="overflow:hidden;"><label style="float:left;">性别：</label>
-		<div class="in"><button id='showUserPicker' class="mui-btn mui-btn-block" type='button'>请选择性别...</button></div>
-		<!-- <select id="sex" class="sex" name="sex"><option value="不限">不限</option><option value="男">男</option><option value="女">女</option></select> --></div>
+		<div class="in"><button id='showUserPicker' class="mui-btn mui-btn-block btn-black" type='button'>请选择性别...</button></div></div>
 	<div class="inp1"><label>人数：</label><input type="number" class="perNum"> *</div>
 	<div class="inp1"><label>单人预算：</label><input type="number" class="yen"> 元 *</div>
 	<div class="inp1"><label>备注：</label><textarea class="tea1 bz-1"></textarea></div>
