@@ -24,12 +24,9 @@ upload.html           --- 上传图片
 pcenter.html          --- 个人中心
 
 login.html            --- 登录页
-nav.html              --- 注册主面板
-register_gz.html      --- 观众注册
-reg_jjr1.html         --- 经纪人注册第一步
-reg_jjr2.html         --- 经纪人注册第二步
-reg_company1.html     --- 企业注册第一步
-reg_company2.html     --- 企业注册第二步
+reg-one.html     	  --- 注册第一步（需求方只有这一步）
+reg-two-jjr.html      --- 注册第二步（经纪人）
+reg-two-qy.html       --- 注册第二步（企业）
 
 
 

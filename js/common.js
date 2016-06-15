@@ -740,23 +740,7 @@ var remix = {
 		setInterval(function(){
 			$(".activeTime").val($(".time-x").val());
 		},30);
-	},
-
-	personNav : function(){
-		var $sec_as = $(".sec_list").find("aside");
-		var $width = $sec_as.eq(0).width();
-		for(var i=0; i<$sec_as.size(); i++){
-			$sec_as.eq(i).css("height",$width);
-		}
-
-		var $height = $(".sec_list").height();
-		var $width = $(".sec_list").width();
-		var $screenWidth = $(window).width();
-		var $screenHeight = $(window).height(); 
-		$(".sec_list").css({position:"relative",left:Math.round(($screenWidth-$width)/2) ,top:Math.round(($screenHeight-$height)/2)});
 	}
-
-
 };
 
 

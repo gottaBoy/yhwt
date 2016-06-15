@@ -28,7 +28,6 @@ img {
 img,input {
 	vertical-align: middle
 }
-
 a {
 	color: #333;
 	text-decoration: none;
@@ -472,7 +471,11 @@ input {
 	top: 0;
 	left: 0
 }
-
+.mui-icon-personadd{
+	 -webkit-animation: heartify .5s infinite alternate;
+     animation:heartify .5s infinite alternate; 
+	 -moz-animation: heartify .5s infinite alternate;
+}
 .role table {
 	background-color: #fff;
 	padding: 10px;
@@ -1966,7 +1969,14 @@ input[type=color],input[type=date],input[type=datetime-local],input[type=datetim
 	background-color: #f7f7f7;
 	color: #333
 }
-
+.role {
+	min-height: 300px;
+}
+.role .null{
+	display: none;
+	line-height:300px;
+	text-align:center;
+}
 .role table {
 	position: relative
 }
@@ -2154,3 +2164,63 @@ input[type=color],input[type=date],input[type=datetime-local],input[type=datetim
 	width: 180px;
 	line-height: 24px
 }
+
+/*＊
+＊nav.html
+*/
+.sec_list{
+    margin: 25% 0 15px;
+}
+
+.sec_list .list {
+    padding-left: 3%;
+    padding-bottom: 10px;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-pack: center;
+    box-pack: center
+}
+
+.sec_list .list a {
+    display: block;
+    width: 30%;
+    margin-right: 3%
+}
+
+.sec_list .list li {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    background-color: #f9f9f9
+}
+
+.sec_list .list li .d-title {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.sec_list .list li .p1 {
+    font-size: 10px;
+    padding: 4px 0 8px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.sec_list .list li .img-box {
+    margin: 0 auto
+}
+
+.sec_list .list li .img i {
+	display: inline-block;
+    width: 70%;
+    padding-top: 70%
+}
+
+
+
+
