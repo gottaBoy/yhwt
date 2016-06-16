@@ -1695,7 +1695,7 @@ input[type=color],input[type=date],input[type=datetime-local],input[type=datetim
 
 .agree a.reg-btn {
 	padding: 5px 15px;
-	background-color: #318bcb;
+	background-color: #ff8604;
 	color: #fff;
 	border-radius: 5px;
 	text-decoration: none;
@@ -1958,7 +1958,7 @@ input[type=color],input[type=date],input[type=datetime-local],input[type=datetim
 	top: 5px;
 	width: 100px;
 	height: 30px;
-	background-color: #318bcb;
+	background-color: #ff8604;
 	color: #fff;
 	font-size: 12px;
 	text-align: center;
@@ -2182,11 +2182,16 @@ input[type=color],input[type=date],input[type=datetime-local],input[type=datetim
 
 .sec_list .list {
     padding-left: 3%;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
     display: -webkit-box;
     display: box;
     -webkit-box-pack: center;
     box-pack: center
+}
+
+.sec_list .one {
+    border-bottom: 1px dashed #ccc;
+    margin: 0 20px;
 }
 
 .sec_list .list a {
