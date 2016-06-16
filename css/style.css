@@ -2169,7 +2169,16 @@ input[type=color],input[type=date],input[type=datetime-local],input[type=datetim
 ＊nav.html
 */
 .sec_list{
-    margin: 25% 0 15px;
+    margin-bottom:15px;
+}
+
+.sec_list h2{
+	font-size: 16px;
+	line-height: 60px;
+	margin-bottom: 15px;
+	text-align: center;
+	background: #C5C3C3;
+	color: #fff;
 }
 
 .sec_list .list {
