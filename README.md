@@ -24,6 +24,7 @@ upload.html           --- 上传图片
 pcenter.html          --- 个人中心
 
 login.html            --- 登录页
+nav.html              --- 注册角色页
 reg-one.html     	  --- 注册第一步（需求方只有这一步）
 reg-two-jjr.html      --- 注册第二步（经纪人）
 reg-two-qy.html       --- 注册第二步（企业）

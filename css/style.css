@@ -512,8 +512,8 @@ input {
 }
 
 .mask {
-	height: 100%;
-	width: 100%;
+	height: auto;
+	width: auto;
 	position: fixed;
 	z-index: 35;
 	left: 0;
@@ -666,7 +666,8 @@ input {
 .close-btn {
 	position: absolute;
 	right: 5px;
-	top: 5px
+	top: 5px;
+	font-size: 28px
 }
 
 .cnt {
@@ -1505,16 +1506,20 @@ input[type=color],input[type=date],input[type=datetime-local],input[type=datetim
 
 .imgview span {
 	display: inline-block;
-	width: 100px;
-	height: 100px;
-	line-height: 100px;
+	width: 108px;
+	height: 108px;
 	background-color: #f7f7f7;
 	font-size: 60px !important;
 	color: #ddd;
 }
 
+.imgview span img{
+	max-width: 108px;
+	max-height: 108px;
+}
+
 .sel-btn {
-	width: 100px;
+	width: 108px;
 	height: 30px;
 	background-color: #308ACA!important;
 	color: #fff!important;
