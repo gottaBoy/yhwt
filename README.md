@@ -28,6 +28,8 @@ nav.html              --- 注册角色页
 reg-one.html     	  --- 注册第一步（需求方只有这一步）
 reg-two-jjr.html      --- 注册第二步（经纪人）
 reg-two-qy.html       --- 注册第二步（企业）
+getpass.html          --- 找回密码
+resetpass.html        --- 重设密码
 
 
 
